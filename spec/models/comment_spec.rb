@@ -2,7 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   let(:user) { User.new(name: 'Forloop', photo: 'myphoto', bio: 'See my bio here', post_counter: 0) }
-  let(:post) { Post.new(title: 'The importance of test', text: 'the content', author: user, likes_counter: 0, comments_counter: 0) }
+  let(:post) do
+    Post.new(title: 'The importance of test', text: 'the content', author: user, likes_counter: 0, comments_counter: 0)
+  end
 
   it 'Should update the likes_count in post' do
     Comment.create(post:, author: user, text: 'The text')
@@ -45,7 +47,6 @@ end
 #     @author
 #   end
 # end
-
 
 # describe Sample do
 #   before :each do
