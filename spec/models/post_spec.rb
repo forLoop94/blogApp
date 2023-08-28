@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  let(:user) { User.new(name: 'Nouridine', photo: 'myphoto', bio: 'This is my bio', post_counter: 0) }
+  let(:user) { User.new(name: 'Forloop', photo: 'myphoto', bio: 'This is my bio', post_counter: 0) }
   let(:post) { Post.new(title: 'All posts come here', text: 'the text', author: user) }
 
   it 'Title must not be blank.' do
