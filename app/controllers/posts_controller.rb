@@ -4,7 +4,5 @@ class PostsController < ApplicationController
     render 'index'
   end
 
-  def show
-    
-  end
+  def show; end
 end
