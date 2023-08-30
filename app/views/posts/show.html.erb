@@ -10,47 +10,20 @@
         <div class="pos">
           <div class="post-info">
             <div>
-                <h3>Post #1 by username</h3>
-                <p class='likes-comments'>Comments: x, Likes:x</p>
+                <h3><%="#{@post.title} by #{@post.author.name}"%></h3>
+                <p class='likes-comments'>Comments: <%=@post.comments.count%> | Likes: <%=@post.likes.count%></p>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper lacus eu nibh hendrerit, a rhoncus magna vulputate. Sed vel dolor porttitor felis aliquam tincidunt. Sed nibh orci, dictum sit amet sodales ac, pharetra in augue. Donec rhoncus vehicula magna. Sed laoreet fermentum tincidunt. Curabitur semper elit ac dui commodo, sed lobortis urna varius. Nulla risus neque, euismod ut ante ut, scelerisque luctus leo. Fusce congue dui at eros porta lacinia.
-
-                Nunc vitae nisi vel dolor rutrum convallis. Maecenas volutpat sapien et arcu scelerisque lacinia. Praesent aliquam leo a ipsum aliquet, at aliquet ante vehicula. In in accumsan tellus, vel bibendum metus. Etiam volutpat, ligula vitae scelerisque sollicitudin, velit orci consectetur est, et porta dui justo et elit. Donec non pharetra ligula. Maecenas euismod leo a mauris viverra aliquet. Donec a lectus ante. Fusce non lacus venenatis lacus ornare fermentum vel eu purus. Praesent fermentum lacus ac quam rhoncus egestas. Suspendisse bibendum arcu vitae ex vulputate, nec commodo libero tristique. Etiam sed blandit sem. Quisque quis venenatis sem. Nam a aliquet velit.
+                <%=@post.text%>
             </p>
           </div>
           <div class="comments">
               <ul class="commens-list">
+                <%@post.comments.each do |comment|%>
                   <li>
-                      <p>Username: comment1</p>
+                      <p><%="#{comment.author.name}: #{comment.text}"%></p>
                   </li>
-                  <li>
-                      <p>Username: comment2</p>
-                  </li>
-                  <li>
-                      <p>Username: comment3</p>
-                  </li>
-                  <li>
-                      <p>Username: comment4</p>
-                  </li>
-                  <li>
-                      <p>Username: comment5</p>
-                  </li>
-                  <li>
-                      <p>Username: comment6</p>
-                  </li>
-                  <li>
-                      <p>Username: comment7</p>
-                  </li>
-                  <li>
-                      <p>Username: comment8</p>
-                  </li>
-                  <li>
-                      <p>Username: comment9</p>
-                  </li>
-                  <li>
-                      <p>Username: comment10</p>
-                  </li>
+                <%end%>
               </ul>
           </div>
         </div>
