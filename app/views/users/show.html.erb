@@ -34,7 +34,7 @@
           </li>
           <%end%>
         </ul>
-        <button class="all-posts">See all posts</button>
+        <%=button_to "See all posts", "/users/#{@user.id}/posts", class: 'all-posts', id: "users-#{@user.id}", method: :get%>
     </div>
   </body>
 </html>

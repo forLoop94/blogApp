@@ -5,8 +5,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: 7)
-    @posts = @user.posts
+    @user = User.find(params[:id])
+    @posts = @user.recent_posts
     render 'show'
   end
 end
