@@ -13,38 +13,26 @@
             </div>
 
             <div class="user-details">
-                <h3>User Name</h3>
-                <p>Number of post: x</p>
+                <h3><%=@user.name%></h3>
+                <p><%=@user.posts.count%></p>
             </div>
         </div>
 
         <div class="bio">
         <h3>Bio</h3>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper lacus eu nibh hendrerit, a rhoncus magna vulputate. Sed vel dolor porttitor felis aliquam tincidunt. Sed nibh orci, dictum sit amet sodales ac, pharetra in augue. Donec rhoncus vehicula magna. Sed laoreet fermentum tincidunt. Curabitur semper elit ac dui commodo, sed lobortis urna varius. Nulla risus neque, euismod ut ante ut, scelerisque luctus leo. Fusce congue dui at eros porta lacinia.
+            <%=@user.bio%>
         </div>
 
         <ul class="post-list">
+          <%@posts.each do |post|%>
           <li>
-            <h3>Post #1</h3>
+            <h3><%=post.title%></h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper lacus eu nibh hendrerit, a rhoncus magna vulputate.
+              <%=post.text%>
             </p>
-            <p class='likes-coomments'>Comments: x, Likes:x</p>
+            <p class='likes-comments'>Comments: <%=post.comments_counter%> | Likes: <%=post.likes_counter%></p>
           </li>
-          <li>
-            <h3>Post #2</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper lacus eu nibh hendrerit, a rhoncus magna vulputate.
-            </p>
-            <p class='likes-coomments'>Comments: x, Likes:x</p>
-          </li>
-          <li>
-            <h3>Post #3</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper lacus eu nibh hendrerit, a rhoncus magna vulputate.
-            </p>
-            <p class='likes-coomments'>Comments: x, Likes:x</p>
-          </li>
+          <%end%>
         </ul>
         <button class="all-posts">See all posts</button>
     </div>
