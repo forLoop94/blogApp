@@ -3,32 +3,26 @@
   <head>
     <title>BlogApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= stylesheet_link_tag "/users/index.css" %>
+    <%= stylesheet_link_tag "/users/users_index.css" %>
   </head>
 
   <body>
     <div class="container">
         <ul class="user-list">
+            <%@users.each do |user|%>
             <li>
                 <div class="profile-photo">
                 <p>photo</p>
                 </div>
 
                 <div class="user-details">
-                    <h3>User Name</h3>
-                    <p>Number of post: x</p>
+                  <%= link_to "/users/#{user.id}" do %>
+                    <h3><%=user.name%></h3>
+                  <%end%>
+                    <p>Number of post: <%=user.posts.count%></p>
                 </div>
             </li>
-            <li>
-                <div class="profile-photo">
-                <p>photo</p>
-                </div>
-
-                <div class="user-details">
-                    <h3>User Name</h3>
-                    <p>Number of post: x</p>
-                </div>
-            </li>
+            <%end%>
         </ul>
     </div>
   </body>
