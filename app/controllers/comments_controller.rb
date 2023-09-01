@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def new
-   @post = Post.find(params[:post_id])
-   @user = User.find(params[:user_id])
+    @post = Post.find(params[:post_id])
+    @user = User.find(params[:user_id])
   end
 
   def create
@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
       text: params[:text]
     )
     if @comment.save
-      redirect_to user_post_path(@user, @post), notice: "Comment succesfully created"
+      redirect_to user_post_path(@user, @post), notice: 'Comment succesfully created'
     else
       render 'new'
     end

@@ -22,8 +22,8 @@ class PostsController < ApplicationController
       text: params[:text],
       author_id: @user.id
     )
-    if @post.save
-      redirect_to user_posts_path(@user), notice: 'new post created succesfully'
-    end
+    return unless @post.save
+
+    redirect_to user_posts_path(@user), notice: 'new post created succesfully'
   end
 end
