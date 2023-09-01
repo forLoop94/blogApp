@@ -13,4 +13,16 @@ class PostsController < ApplicationController
   def new
     @user = User.find(params[:user_id])
   end
+
+  def create
+    @user = User.find(params[:user_id])
+    @post = Post.new(
+      title: params[:title],
+      text: params[:text],
+      author_id: @user.id
+    )
+    if @post.save
+      redirect_to user_posts_path(@user), notice: 'new post created succesfully'
+    end
+  end
 end
