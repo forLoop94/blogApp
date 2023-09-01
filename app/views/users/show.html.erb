@@ -36,6 +36,7 @@
           <%end%>
         </ul>
         <%=button_to "See all posts", "/users/#{@user.id}/posts", class: 'all-posts', id: "users-#{@user.id}", method: :get%>
+        <%= button_to "New post", new_user_post_path(@user), class: 'all-posts', method: :get %>
     </div>
   </body>
 </html>
