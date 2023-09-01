@@ -27,7 +27,7 @@
                 <%end%>
               </ul>
           </div>
-        <%= link_to 'Add comments', new_user_post_comment_path(@user, @post) %>
+        <%= button_to 'Add comments', new_user_post_comment_path(@user, @post), class: 'all-posts' %>
     </div>
   </body>
 </html>
