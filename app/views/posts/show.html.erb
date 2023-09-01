@@ -16,6 +16,9 @@
             </div>
             <p>
                 <%=@post.text%>
+                <%= form_with url: user_post_likes_path(@post.author, @post), class: 'like_button' do |form| %>
+                  <%= form.submit 'Like' %>
+                <% end %>
             </p>
           </div>
           <div class="comments">
@@ -27,7 +30,7 @@
                 <%end%>
               </ul>
           </div>
-        <%= button_to 'Add comments', new_user_post_comment_path(@user, @post), class: 'all-posts' %>
+        <%= button_to 'Add comments', new_user_post_comment_path(@user, @post), class: 'all-posts', method: :get %>
     </div>
   </body>
 </html>
