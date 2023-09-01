@@ -35,8 +35,10 @@
           </li>
           <%end%>
         </ul>
-        <%=button_to "See all posts", "/users/#{@user.id}/posts", class: 'all-posts', id: "users-#{@user.id}", method: :get%>
-        <%= button_to "New post", new_user_post_path(@user), class: 'all-posts', method: :get %>
+        <div class="user_show_btn_grp">
+          <%=button_to "See all posts", "/users/#{@user.id}/posts", class: 'all-posts', id: "users-#{@user.id}", method: :get%>
+          <%= button_to "Add new post", new_user_post_path(@user), class: 'all-posts', method: :get %>
+        </div>
     </div>
   </body>
 </html>
