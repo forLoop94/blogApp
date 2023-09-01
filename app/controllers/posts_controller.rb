@@ -7,12 +7,12 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @user = User.find(params[:user_id])
     render 'show'
   end
 
   def new
     @user = User.find(params[:user_id])
-    @post = Post.find(params[:post_id])
   end
 
   def create
