@@ -15,7 +15,7 @@
 
             <div class="user-details">
                 <h3><%=@user.name%></h3>
-                <p><%=@user.posts.count%></p>
+                <p>Number of Posts: <%=@user.posts.count%></p>
             </div>
         </div>
 
@@ -31,11 +31,14 @@
             <p>
               <%=post.text%>
             </p>
-            <p class='likes-comments'>Comments: <%=post.comments_counter%> | Likes: <%=post.likes_counter%></p>
+            <p class='likes-comments'>Comments: <%=post.comments.count%> | Likes: <%=post.likes.count%></p>
           </li>
           <%end%>
         </ul>
-        <%=button_to "See all posts", "/users/#{@user.id}/posts", class: 'all-posts', id: "users-#{@user.id}", method: :get%>
+        <div class="user_show_btn_grp">
+          <%=button_to "See all posts", "/users/#{@user.id}/posts", class: 'all-posts', id: "users-#{@user.id}", method: :get%>
+          <%= button_to "Add new post", new_user_post_path(@user), class: 'all-posts', method: :get %>
+        </div>
     </div>
   </body>
 </html>

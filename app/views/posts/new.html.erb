@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlogApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= stylesheet_link_tag "/users/posts.css" %>
+  </head>
+
+  <body>
+    <h1>New Post</h1>
+
+    <%= form_with model: @post, url: user_posts_path(@user), method: :post, class: "comments_form" do |form| %>
+      <div>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+      </div>
+
+      <div>
+        <%= form.label :text %><br>
+        <%= form.text_field :text %>
+      </div>
+
+      <div>
+        <%= form.submit %>
+      </div>
+    <%end%>
+  </body>
+</html>

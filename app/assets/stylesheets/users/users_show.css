@@ -74,3 +74,8 @@
   box-shadow: 2px 2px 2px black;
   border: solid black 2px;
 }
+
+.user_show_btn_grp {
+  display: flex;
+  justify-content: space-between;
+}
