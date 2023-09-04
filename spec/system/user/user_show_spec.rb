@@ -89,5 +89,11 @@ RSpec.describe "UserShows", type: :system do
       expect(page).to have_content("My third post")
       expect(page).to have_content("My fourth post")
     end
+
+    it "When I click a user's post, it redirects me to that post's show page." do
+      visit user_path(@user_1)
+      click_link("post_#{@posts[0].id}_link")
+      page.should have_button('Add comments')
+    end
   end
 end

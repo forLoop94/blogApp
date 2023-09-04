@@ -27,7 +27,9 @@
         <ul class="post-list">
           <%@recent_posts.each do |post|%>
           <li>
+          <%= link_to "/users/#{@user.id}/posts/#{post.id}", id:"post_#{post.id}_link" do %>
             <h3><%=post.title%></h3>
+          <%end%>
             <p>
               <%=post.text%>
             </p>
