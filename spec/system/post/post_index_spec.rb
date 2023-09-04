@@ -87,5 +87,16 @@ RSpec.describe "UserShows", type: :system do
       visit user_posts_path(@user_1)
       expect(page).to have_content("first comment")
     end
+
+    it "I can see how many comments and likes a post has." do
+      visit user_posts_path(@user_1)
+      expect(page).to have_content("Comments: 1 | Likes: 0")
+    end
+
+    it "When I click on a post, it redirects me to that post's show page." do
+      visit user_posts_path(@user_1)
+      click_link("#{@posts[0].title}")
+      expect(page).to have_button("Like")
+    end
   end
 end
