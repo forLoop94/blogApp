@@ -47,5 +47,11 @@ RSpec.describe 'UserIndices', type: :system do
       visit '/users'
       expect(page).to have_content("Number of Posts: 1")
     end
+
+    it "When I click on a user, I am redirected to that user's show page." do
+      visit '/users'
+      click_link("link-to-Charles", :match => :first)
+      expect(page).to have_content("Bio")
+    end
   end
 end
