@@ -95,5 +95,13 @@ RSpec.describe 'UserShows', type: :system do
       click_link("post_#{@posts[0].id}_link")
       page.should have_button('Add comments')
     end
+
+    it "I can see the user's first 3 posts." do
+      visit user_path(@user1)
+      expect(page).to have_content('My first post')
+      expect(page).to have_content('My second post')
+      expect(page).to have_content('My third post')
+      expect(page).not_to have_content('My fourth post')
+    end
   end
 end
