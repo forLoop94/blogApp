@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
   describe 'GET /index and /show' do
-
     let(:person) do
       User.new(
         name: 'Charles',
