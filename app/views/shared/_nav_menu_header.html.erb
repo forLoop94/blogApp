@@ -1,0 +1,10 @@
+<header class="nav">
+  <div class="nav-links">
+    <% if user_signed_in? %>
+      <%= button_to 'Sign out', destroy_user_session_path, class: 'nav_link', method: :delete %>
+    <% else %>
+      <%= link_to "Sign in", new_user_session_path, class: 'nav_link'  %>
+      <%= link_to "Sign up", new_user_registration_path, class: 'nav_link'  %>
+    <% end %>
+  </div>
+</header>
