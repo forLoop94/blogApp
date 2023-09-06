@@ -14,8 +14,8 @@
  *= require_self
  */
 
- .login_form {
-   width: 200px;
+.login_form {
+  width: 200px;
   margin: auto;
   margin-top: 50px;
 }
@@ -24,15 +24,17 @@
   margin: auto;
   width: 200px;
 }
-.login_form form .actions input{
- margin: auto;
-  width: 100%;
-}
-.field input{
+
+.field input {
   margin: auto;
   width: 100%;
 }
 
-.remember input{
+.remember input {
   width: 10%;
+}
+
+.login_form form .actions input {
+  margin: auto;
+  width: 100%;
 }
