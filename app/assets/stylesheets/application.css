@@ -15,19 +15,21 @@
  */
 
 .login_form {
-  width: 200px;
+  width: 70%;
   margin: auto;
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login_form form {
-  margin: auto;
-  width: 200px;
+  width: 70%;
 }
 
 .field input {
-  margin: auto;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .remember input {
@@ -35,8 +37,13 @@
 }
 
 .login_form form .actions input {
-  margin: auto;
   width: 100%;
+}
+
+.reg_btns {
+  box-shadow: 2px 2px 2px black;
+  background-color: white;
+  margin-bottom: 2rem;
 }
 
 .nav_link {
