@@ -15,7 +15,7 @@
  */
 
 .login_form {
-  width: 70%;
+  width: 85%;
   margin: auto;
   margin-top: 50px;
   display: flex;
@@ -24,7 +24,7 @@
 }
 
 .login_form form {
-  width: 70%;
+  width: 85%;
 }
 
 .field input {
