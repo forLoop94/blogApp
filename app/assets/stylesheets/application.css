@@ -13,3 +13,50 @@
  *= require_tree .
  *= require_self
  */
+
+.login_form {
+  width: 85%;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_form form {
+  width: 85%;
+}
+
+.field input {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.remember input {
+  width: 10%;
+}
+
+.login_form form .actions input {
+  width: 100%;
+}
+
+.reg_btns {
+  box-shadow: 2px 2px 2px black;
+  background-color: white;
+  margin-bottom: 2rem;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: rgb(102, 95, 95);
+  background-color: rgb(228, 221, 221);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.nav-links {
+  margin: 2rem 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
