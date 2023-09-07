@@ -38,3 +38,18 @@
   margin: auto;
   width: 100%;
 }
+
+.nav_link {
+  text-decoration: none;
+  color: rgb(102, 95, 95);
+  background-color: rgb(228, 221, 221);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.nav-links {
+  margin: 2rem 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
